@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    min-height: 100vh;       
+    margin: 0;
+    background-image: url(/Resources/Assets/Background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#login-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 340px;
+    padding: 30px 20px 20px 20px; 
+    background-color: #ececec;    
+    border-radius: 50px;          
+    border: 1px solid #d4dad0;    
+    box-sizing: border-box;
+    box-shadow:0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+#login-body {
+    width: 100%;
+    text-align: center;
+}
+
+#login-body p {
+    color: #446630;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;   
+    letter-spacing: 0.5px;       
+    margin-bottom: 20px;
+}
+
+#login-body a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    display: block;               
+    text-decoration: none;
+    color: #2e4025;
+    font-weight: bold;
+    text-transform: uppercase;    
+    font-size: 14px;
+
+    background-color: #d2d2d2;   
+    padding: 12px 0;              
+    margin: 14px auto;            
+    width: 250px;
+    border-radius: 8px;           
+    border: 2px solid #2e4025;
+    
+    
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+}
+
+
+#login-body a:hover {
+    background-color: #c6cfc3;
+    transform: translateY(-1px);
+}
+
+
+.divider {
+    border: none;
+    border-top: 2px solid #bcbdb9;
+    width: 95%;
+    margin: 20px 0 15px 0;
+}
+
+#footer p {
+    font-family: 'Times New Roman', Times, serif; 
+    color: #333333;
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.6;
+}
