@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Mahasiswa - Wombat University</title>
+    <link href="DashboardWombat.css" rel="stylesheet">
+    
+</head>
+<body>
+
+    <div class="wood-element-left"></div>
+    <div class="wood-element-right"></div>
+    
+
+    <nav class="navbar navbar-custom py-2 mb-4">
+        <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="C:\Users\rafae\Downloads\wombat-logo.png" class="me-3 rounded">
+                </div>
+            <div class="d-flex align-items-center">
+                <img src="https://via.placeholder.com/35" alt="User" class="rounded-circle me-2">
+                <div class="me-4 text-end">
+                    <div class="fw-bold" th:text="${mahasiswa.nama}">Antonio Fernando</div>
+                    <small class="text-muted">NPM: <span th:text="${mahasiswa.nim}">6182401234</span></small>
+                </div>
+            </div>
+            <button class="btn btn-outline-danger btn-sm d-flex align-items-center gap-1">
+                Logout <i class="bi bi-box-arrow-right"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container dashboard-container">
+        
+        <div class="welcome-section shadow-sm mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-8 text-center text-md-start">
+                    <h2 class="fw-bold" style="color: #1c2e21;">Selamat Datang, <span th:text="${mahasiswa.nama}">Antonio</span>!</h2>
+                    <p class="text-secondary m-0">Silakan pilih menu di bawah ini untuk mengakses layanan akademik Anda.</p>
+                </div>
+                <div class="col-md-4 text-center text-md-end mt-3 mt-md-0">
+                    <span class="badge bg-success px-3 py-2" style="font-size: 0.85rem; !important;">
+                        <i class="bi bi-check-circle-fill me-1"></i> Status: Aktif
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-sage-grid">
+            
+            <a href="#" class="card-menu-sage shadow-sm">
+                <i class="bi bi-person-card-checklist"></i>
+                <span>PROFIL MAHASISWA</span>
+            </a>
+
+            <a href="#" class="card-menu-sage shadow-sm">
+                <i class="bi bi-calendar2-check"></i>
+                <span>KEHADIRAN & PRESENSI</span>
+            </a>
+
+            <a href="#" class="card-menu-sage shadow-sm">
+                <i class="bi bi-cash-coin"></i>
+                <span>PENGISIAN FRS</span>
+            </a>
+
+            <a th:href="@{/matkul}" class="card-menu-sage shadow-sm">
+                <i class="bi bi-file-earmark-spreadsheet"></i>
+                <span>HISTORY FRS</span>
+            </a>
+
+            <a href="#" class="card-menu-sage shadow-sm">
+                <i class="bi bi-mortarboard-fill"></i>
+                <span>JADWAL PERKULIAHAN</span>
+            </a>
+
+            <a href="#" class="card-menu-sage shadow-sm">
+                <i class="bi bi-chat-square-heart"></i>
+                <span>ANGKET DOSEN</span>
+            </a>
+
+            <a href="#" class="card-menu-sage shadow-sm">
+                <i class="bi bi-book-half"></i>
+                <span>PERPUSTAKAAN DIGITAL</span>
+            </a>
+
+            <a href="#" class="card-menu-sage shadow-sm">
+                <i class="bi bi-megaphone-fill"></i>
+                <span>SUARA MAHASISWA</span>
+            </a>
+
+        </div>
+    </div>
+
+    <script src
