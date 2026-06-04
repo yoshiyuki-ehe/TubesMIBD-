@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History FRS - Universitas Wombat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="PengisianFRS.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+    <nav class="navbar navbar-custom py-2 mb-4">
+        <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="https://via.placeholder.com/45" alt="Logo Universitas" class="me-3 rounded">
+                <div>
+                    <h6 class="mb-0 fw-bold text-uppercase" style="letter-spacing: 1px; font-size: 0.85rem;">Universitas</h6>
+                    <h5 class="mb-0 fw-bold text-primary" style="margin-top: -2px;">Wombat</h5>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <a th:href="@{/matkul}" class="btn btn-outline-secondary btn-sm me-3">
+                    <i class="bi bi-arrow-left"></i> Logout
+                </a>
+                <img src="https://via.placeholder.com/35" alt="User" class="rounded-circle me-2">
+                <div class="me-4 text-end">
+                    <div class="fw-bold" th:text="${mahasiswa.nama}">Antonio Fernando</div>
+                    <small class="text-muted">NPM: <span th:text="${mahasiswa.nim}">6182401234</span></small>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-2">
+        <h3 class="fw-bold mb-2 text-uppercase">History Pengambilan FRS</h3>
+        <p class="text-muted mb-4">Daftar rekam jejak Kartu Rencana Studi (KRS) mahasiswa per semester.</p>
+
+        <div class="card-main p-4 mb-4" th:each="semesterData : ${historySemester}">
+            <div class="d-flex justify-content-between align-items-center mb-3 border-bottom pb-2">
+                <h5 class="fw-bold text-primary mb-0" th:text="${semesterData.namaSemester}">SEMESTER GANJIL 2025/2026</h5>
+                <span class="badge bg-success px-3 py-2 fw-bold" th:text="${semesterData.totalSksLulus + ' SKS Terambil'}">20 SKS Terambil</span>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover align-middle text-center">
+                    <thead>
+                        <tr>
+                            <th class="th-custom" style="width: 15%;">Kode Matkul</th>
+                            <th class="th-custom" style="width: 40%;">Nama Mata Kuliah</th>
+                            <th class="th-custom" style="width: 10%;">SKS</th>
+                            <th class="th-custom" style="width: 15%;">Kelas</th>
+                            <th class="th-custom" style="width: 20%;">Jadwal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="history : ${semesterData.listHistoryMatkul}">
+                            <td class="fw-semibold text-muted" th:text="${history.kodeMatkul}">AIF101</td>
+                            <td class="text-start fw-bold" th:text="${history.namaMatkul}">Dasar Pemrograman</td>
+                            <td class="fw-semibold" th:text="${history.sks + ' SKS'}">4 SKS</td>
+                            <td class="text-muted fw-bold text-uppercase" th:text="${history.namaKelas}">A</td>
+                            <td class="text-start">
+                                <span class="fw-semibold text-dark" th:text="${matkul.hari}">Senin</span>
+                                <span class="text-jadwal" th:text="${matkul.jamMulai + ' - ' + matkul.jamSelesai}">08:00 - 10:00</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
