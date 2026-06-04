@@ -1,0 +1,118 @@
+/* Core Style */
+body { 
+    background-color: #C8FFE1; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+.navbar-custom { 
+    background-color: #ffffff; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+}
+.card-main { 
+    background: #ffffff; 
+    border-radius: 12px; 
+    border: 1px solid #dbe2e8; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02); 
+}
+
+/* Search Bar */
+.search-container { 
+    position: relative; 
+}
+.search-container i { 
+    position: absolute; 
+    left: 15px; 
+    top: 12px; 
+    color: #a0aec0; 
+}
+.search-input { 
+    padding-left: 40px; 
+    border-radius: 8px; 
+    border: 2px solid #0056b3; 
+}
+
+/* Table Style */
+.th-custom { 
+    background-color: #dbe2e8 !important; 
+    color: #000000; 
+    border: none; 
+    text-align: center; 
+    border-radius: 20px; 
+}
+.table th { 
+    border: none; 
+    padding: 10px; 
+}
+.table td { 
+    vertical-align: middle; 
+    padding: 15px 10px; 
+}
+
+/* Buttons */
+.btn-tambah { 
+    background-color: #28a745; 
+    color: white; 
+    font-weight: bold; 
+    width: 120px; 
+    border-radius: 6px; 
+}
+.btn-tambah:hover { 
+    background-color: #218838; 
+    color: white; 
+}
+.btn-penuh { 
+    background-color: #dbe2e8; 
+    color: #7f8c8d; 
+    font-weight: bold; 
+    width: 120px; 
+    border-radius: 6px; 
+    border: none; 
+    cursor: not-allowed; 
+}
+.btn-terambil { 
+    background-color: #0056b3; 
+    color: white; 
+    font-weight: bold; 
+    width: 120px; 
+    border-radius: 6px; 
+}
+
+/* Badges & Text */
+.badge-status { 
+    font-size: 0.85rem; 
+    color: #7f8c8d; 
+    display: block; 
+}
+.text-jadwal {
+    font-size: 0.85rem;
+    color: #6c757d;
+    display: block;
+}
+
+/* Sidebar Panel */
+.sidebar-panel { 
+    background: #ffffff; 
+    border-radius: 12px; 
+    border: 1px solid #dbe2e8; 
+    padding: 20px; 
+}
+.progress-custom { 
+    height: 15px; 
+    background-color: #e9ecef; 
+    border-radius: 10px; 
+}
+.progress-bar-custom { 
+    background-color: #28a745; 
+    border-radius: 10px; 
+}
+.btn-submit-frs { 
+    background-color: #28a745; 
+    color: white; 
+    font-weight: bold; 
+    width: 100%; 
+    padding: 12px; 
+    border-radius: 8px; 
+    border: none; 
+}
+.btn-submit-frs:hover { 
+    background-color: #218838; 
+}
