@@ -4,7 +4,7 @@ body {
     align-items: center;     
     min-height: 100vh;       
     margin: 0;
-    background-image: url('/image/Background.png');
+    background-image: url('/Resources/Assets/Background.png');
     background-size: cover;
     background-position: center;
 }
@@ -15,7 +15,7 @@ body {
     align-items: center;
     width: 340px;
     padding: 30px 20px 20px 20px; 
-    background-color: #fcfcfc;    
+    background-color: #ececec;    
     border-radius: 50px;          
     border: 1px solid #dcdfd9;    
     box-sizing: border-box;
@@ -28,6 +28,12 @@ body {
 }
 
 
+#logo-wombat img {
+    width: 200px;        
+    height: auto;        
+    margin-top: 10px;    
+    margin-bottom: 5px;  
+}
 
 #login-body {
     width: 100%;
