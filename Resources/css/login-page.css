@@ -4,7 +4,7 @@ body {
     align-items: center;     
     min-height: 100vh;       
     margin: 0;
-    background-image: url(/Resources/Assets/Background.png);
+    background-image: url('/image/Background.png');
     background-size: cover;
     background-position: center;
 }
@@ -15,11 +15,16 @@ body {
     align-items: center;
     width: 340px;
     padding: 30px 20px 20px 20px; 
-    background-color: #ececec;    
+    background-color: #fcfcfc;    
     border-radius: 50px;          
-    border: 1px solid #d4dad0;    
+    border: 1px solid #dcdfd9;    
     box-sizing: border-box;
-    box-shadow:0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* box-shadow:0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+
+    outline: 1.5px solid #c2bfa7;
+    outline-offset: -6px;
+    
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08), 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 
@@ -30,7 +35,7 @@ body {
 }
 
 #login-body p {
-    color: #446630;
+    color: #4b5e40;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     font-size: 14px;
@@ -45,17 +50,17 @@ body {
     text-align: center;
     display: block;               
     text-decoration: none;
-    color: #2e4025;
+    color: #24331e;
     font-weight: bold;
     text-transform: uppercase;    
     font-size: 14px;
 
-    background-color: #d2d2d2;   
+    background-color: #d8dcd6;   
     padding: 12px 0;              
     margin: 14px auto;            
     width: 250px;
     border-radius: 8px;           
-    border: 2px solid #2e4025;
+    border: 2px solid #24331e;
     
     
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
@@ -64,14 +69,14 @@ body {
 
 
 #login-body a:hover {
-    background-color: #c6cfc3;
+    background-color: #cbd2c7;
     transform: translateY(-1px);
 }
 
 
 .divider {
     border: none;
-    border-top: 2px solid #bcbdb9;
+    border-top: 2px solid #d2d4cf;
     width: 95%;
     margin: 20px 0 15px 0;
 }
