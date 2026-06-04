@@ -1,0 +1,41 @@
+/* Core Style - Tema hijau cerah */
+body { 
+    background-color: #ebf9f5; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    color: #000000;
+}
+.navbar-custom { 
+    background-color: #ffffff; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+}
+.card-main { 
+    background: #ffffff; 
+    border-radius: 12px; 
+    border: 1px solid #dbe2e8; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02); 
+}
+
+/* Tabel Bulat Sesuai Gambar Referensi Pertama */
+.th-custom { 
+    background-color: #dbe2e8 !important; 
+    color: #000000; 
+    border: none; 
+    text-align: center; 
+    border-radius: 20px; 
+    font-weight: bold;
+}
+.table th { 
+    border: none; 
+    padding: 10px; 
+}
+.table td { 
+    vertical-align: middle; 
+    padding: 15px 10px; 
+}
+
+/* Kategori Teks Pendukung */
+.text-jadwal {
+    font-size: 0.85rem;
+    color: #6c757d;
+    display: block;
+}
