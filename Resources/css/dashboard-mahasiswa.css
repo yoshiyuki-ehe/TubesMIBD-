@@ -1,0 +1,183 @@
+:root {
+    --forest-dark: #1e2f23;
+    --forest-mid: #2c3e30;
+    --silk-cream: #f4f6f2;
+    --gold-luxury: #c4b38d;
+    --gold-light: #e2dac6;
+}
+
+/* BASE BACKGROUND KREM SUTRA */
+body {
+    background-color: var(--silk-cream) !important;
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* BANNER ATAS HIJAU TUA UNTUK KONTRAST TINGGI */
+.premium-top-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 320px;
+    background: linear-gradient(185deg, var(--forest-dark) 0%, var(--forest-mid) 100%);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    z-index: 0;
+}
+
+/* NAVBAR KUSTOM */
+.custom-nav {
+    position: relative;
+    z-index: 10;
+    background: transparent !important;
+}
+
+.brand-logo {
+    height: 45px;
+    width: auto;
+    filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.3));
+}
+
+.vertical-divider {
+    width: 1px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.text-gold {
+    color: var(--gold-luxury) !important;
+}
+
+/* BUTTON LOGOUT ELEGAN */
+.btn-logout-luxury {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 6px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-logout-luxury:hover {
+    color: var(--forest-dark);
+    background-color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+}
+
+/* CONTENT CONTAINER */
+.dashboard-container {
+    position: relative;
+    z-index: 5;
+    padding-top: 25px;
+}
+
+/* WELCOME BOX */
+.welcome-luxury-box {
+    background: transparent;
+    padding: 10px 0;
+}
+
+.text-gold-light {
+    color: var(--gold-light);
+    opacity: 0.9;
+}
+
+/* BADGE STATUS DENGAN ANIMASI DENYUT */
+.status-pill {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--gold-luxury);
+    color: var(--gold-luxury);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(5px);
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #52b788;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px #52b788;
+}
+
+/* GRID LAYOUT */
+.menu-luxury-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    margin-top: 10px;
+}
+
+/* KARTU MENU MINIMALIS LUXURY */
+.menu-item-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(44, 62, 48, 0.06);
+    border-radius: 24px;
+    padding: 35px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(44, 62, 43, 0.04);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Lingkaran Icon */
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background-color: var(--silk-cream);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.menu-item-card i {
+    font-size: 1.8rem;
+    color: var(--forest-mid);
+    transition: all 0.3s ease;
+}
+
+.menu-item-card p {
+    font-weight: 700;
+    color: var(--forest-dark);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* HOVER EFFECT - CARD BERUBAH MENJADI EMAS GELOP */
+.menu-item-card:hover {
+    transform: translateY(-10px);
+    background-color: var(--forest-dark);
+    border-color: var(--forest-dark);
+    box-shadow: 0 20px 40px rgba(30, 47, 35, 0.15);
+}
+
+.menu-item-card:hover .icon-circle {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-item-card:hover i {
+    color: var(--gold-luxury);
+}
+
+.menu-item-card:hover p {
+    color: #ffffff !important;
+}
