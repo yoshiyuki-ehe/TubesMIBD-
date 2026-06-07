@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Perkuliahan - Wombat University</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="JadwalPerkuliahan.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark custom-nav py-3">
+        <div class="container px-4 d-flex justify-content-between align-items-center">
+            <img src="/image/wombat-logo.png" class="brand-logo">
+            
+            <div class="d-flex align-items-center gap-3">
+                <div class="text-end user-details-box">
+                    <span class="d-block fw-bold text-white header-name" th:text="${mahasiswa.nama}">Niki Kucing</span>
+                    <span class="badge text-gold p-0" style="font-size: 0.8rem;">NPM: <span th:text="${mahasiswa.nim}">6182401234</span></span>
+                </div>
+                <div class="vertical-divider"></div>
+                <a href="/" class="btn-logout-luxury">
+                    <i class="bi bi-box-arrow-right"></i> Keluar
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container dashboard-container">
+
+        <div class="welcome-luxury-box mb-4">
+            <h2 class="fw-bold text-white mb-1">Jadwal Mata Kuliah</h2>
+            <p class="text-gold-light m-0">Silahkan klik Mata Kuliah di bawah untuk melihat rincian ruang dan waktu kelas Anda.</p>
+        </div>
+
+        <div class="schedule-accordion-list">
+            
+            <!-- ACCORDION JADWAL 1 -->
+            <div class="wombat-accordion-card">
+                <details open>
+                    <summary>
+                        <div class="summary-left">
+                            <span class="subject-badge">MK234G01</span>
+                            <span class="subject-title">Level A1 Membaca</span>
+                        </div>
+                    </summary>
+                    <div class="accordion-inner-panel">
+                        <table class="wombat-luxury-table">
+                            <thead>
+                                <tr>
+                                    <th>Kelas</th>
+                                    <th>Hari</th>
+                                    <th>Waktu</th>
+                                    <th>Ruang</th>
+                                    <th>Dosen</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="text-forest fw-bold">AA</span></td>
+                                    <td>Senin</td>
+                                    <td>08:00 - 09:40</td>
+                                    <td>Gedung 10.1.16</td>
+                                    <td>Prof. Dr. Barnaby Burrow</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="text-forest fw-bold">CB</span></td>
+                                    <td>Rabu</td>
+                                    <td>10:00 - 11:40</td>
+                                    <td>Gedung 9.0.34</td>
+                                    <td>Dr. Wombat Senioritas</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+            </div>
+
+            <!-- ACCORDION JADWAL 2 -->
+            <div class="wombat-accordion-card">
+                <details>
+                    <summary>
+                        <div class="summary-left">
+                            <span class="subject-badge">MK234G02</span>
+                            <span class="subject-title">Level A1 Mendengarkan</span>
+                        </div>
+                    </summary>
+                    <div class="accordion-inner-panel">
+                        <table class="wombat-luxury-table">
+                            <thead>
+                                <tr>
+                                    <th>Kelas</th>
+                                    <th>Hari</th>
+                                    <th>Waktu</th>
+                                    <th>Ruang</th>
+                                    <th>Dosen</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="text-forest fw-bold">DB</span></td>
+                                    <td>Selasa</td>
+                                    <td>13:00 - 14:40</td>
+                                    <td>Lab Komputer 1</td>
+                                    <td>Dr. Kapi Bara Mundi</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+            </div>
+
+            <!-- JADWAL 3 -->
+            <div class="wombat-accordion-card">
+                <details>
+                    <summary>
+                        <div class="summary-left">
+                            <span class="subject-badge">MK234G03</span>
+                            <span class="subject-title">Level A1 Menulis</span>
+                        </div>
+                    </summary>
+                    <div class="accordion-inner-panel">
+                        <table class="wombat-luxury-table">
+                            <thead>
+                                <tr>
+                                    <th>Kelas</th>
+                                    <th>Hari</th>
+                                    <th>Waktu</th>
+                                    <th>Ruang</th>
+                                    <th>Dosen</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="text-forest fw-bold">RS</span></td>
+                                    <td>Kamis</td>
+                                    <td>08:00 - 10:30</td>
+                                    <td>Gedung 10.3.17</td>
+                                    <td>Prof. Dr. Serdi Fambo</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
