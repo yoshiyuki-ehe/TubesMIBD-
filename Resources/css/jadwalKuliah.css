@@ -1,0 +1,252 @@
+/* === VARIABEL WARNA (Sama Persis Dengan Dashboard Anda) === */
+:root {
+    --forest-dark: #1e2f23;
+    --forest-mid: #2c3e30;
+    --silk-cream: #f4f6f2;
+    --gold-luxury: #c4b38d;
+    --gold-light: #e2dac6;
+}
+
+/* BASE BACKGROUND GRADIENT */
+body {
+    background-image: linear-gradient(to bottom, rgba(27, 67, 50, 0.88) 40%, rgba(179, 137, 93, 0.85) 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-attachment: fixed;
+}
+
+/* BANNER ATAS HIJAU TUA */
+
+/* NAVBAR UTAMA */
+.custom-nav {
+    position: relative;
+    z-index: 10;
+    background: transparent !important;
+}
+
+.brand-logo {
+    height: 45px;
+    width: auto;
+    filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.3));
+}
+
+.vertical-divider {
+    width: 1px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.text-gold {
+    color: var(--gold-luxury) !important;
+}
+
+.text-gold-light {
+    color: var(--gold-light);
+    opacity: 0.9;
+}
+
+.text-forest {
+    color: var(--forest-dark);
+}
+
+/* BUTTON LOGOUT */
+.btn-logout-luxury {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 6px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-logout-luxury:hover {
+    color: var(--forest-dark);
+    background-color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+}
+
+/* CONTENT CONTAINER */
+.dashboard-container {
+    position: relative;
+    z-index: 5;
+    padding-top: 25px;
+    max-width: 1000px;
+}
+
+/* SUB-NAVBAR INTERNAL */
+.top-bar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 15px;
+}
+
+.brand-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-nav-links {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+}
+
+.menu-nav-links li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.menu-nav-links li a:hover,
+.menu-nav-links li a.active {
+    color: var(--forest-dark);
+    background-color: var(--gold-light);
+}
+
+/* WELCOME HEADLINE BOX */
+.welcome-luxury-box {
+    background: transparent;
+    padding: 10px 0;
+}
+
+/* === MODIFIKASI LIST JADWAL ACCORDION (TEMA LUXURY) === */
+.schedule-accordion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.wombat-accordion-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(44, 62, 48, 0.06);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(44, 62, 43, 0.04);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+summary {
+    display: flex;
+    align-items: center;
+    padding: 25px 30px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.summary-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Badge Kode Matakuliah menggunakan warna Silk Cream */
+.subject-badge {
+    background-color: var(--silk-cream);
+    color: var(--forest-dark);
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 6px 14px;
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.subject-title {
+    font-weight: 700;
+    color: var(--forest-dark);
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+/* Ikon Panah Menggunakan Bootstrap Icon Bawaan Melalui Pseudo-Element */
+summary::after {
+    content: "\b2a2"; /* Menggunakan kode icon panah bawah */
+    font-family: "bootstrap-icons";
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--forest-mid);
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+/* Efek Hover: Berubah Menjadi Hijau Gelap Seperti Menu Utama Dashboard */
+.wombat-accordion-card:hover {
+    transform: translateY(-5px);
+    background-color: var(--forest-dark);
+    border-color: var(--forest-dark);
+    box-shadow: 0 20px 40px rgba(30, 47, 35, 0.15);
+}
+
+.wombat-accordion-card:hover .subject-badge {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--gold-luxury);
+}
+
+.wombat-accordion-card:hover .subject-title,
+.wombat-accordion-card:hover summary::after {
+    color: #ffffff;
+}
+
+/* PANEL AREA DALAM TABEL JADWAL */
+.accordion-inner-panel {
+    padding: 0 30px 30px 30px;
+    background-color: #ffffff;
+}
+
+.wombat-accordion-card:hover .accordion-inner-panel {
+    background-color: #ffffff; /* Mengunci background tabel tetap putih saat kartu di-hover */
+}
+
+/* TABEL JADWAL 3 KOLOM */
+.wombat-luxury-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    table-layout: fixed;
+}
+
+.wombat-luxury-table td:nth-child(1) { width: 10%; }
+.wombat-luxury-table td:nth-child(2) { width: 15%; }
+.wombat-luxury-table td:nth-child(3) { width: 20%; }
+.wombat-luxury-table td:nth-child(4) { width: 10%; }
+.wombat-luxury-table td:nth-child(5) { width: 35%; }
+
+.wombat-luxury-table th {
+    color: var(--text-muted);
+    font-weight: 600;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--silk-cream);
+    color: #7f8c8d;
+}
+
+.wombat-luxury-table td {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--silk-cream);
+    color: #555555;
+}
