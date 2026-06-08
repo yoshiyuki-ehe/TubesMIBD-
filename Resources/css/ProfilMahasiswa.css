@@ -1,0 +1,217 @@
+/* === VARIABEL WARNA PORTAL WOMBAT UNIVERSITY === */
+:root {
+    --forest-dark: #1e2f23;
+    --forest-mid: #2c3e30;
+    --silk-cream: #f4f6f2;
+    --gold-luxury: #c4b38d;
+    --gold-light: #e2dac6;
+}
+
+/* BASE BACKGROUND GRADIENT (Atas ke Bawah Dominan Hijau) */
+body {
+    background-image: linear-gradient(to bottom, rgba(27, 67, 50, 0.88) 40%, rgba(179, 137, 93, 0.85) 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-attachment: fixed;
+}
+
+/* BANNER ATAS HIJAU TUA */
+.premium-top-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 320px;
+    background: linear-gradient(185deg, var(--forest-dark) 0%, var(--forest-mid) 100%);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    z-index: 0;
+}
+
+/* NAVBAR UTAMA */
+.custom-nav {
+    position: relative;
+    z-index: 10;
+    background: transparent !important;
+}
+
+.brand-logo {
+    height: 115px;
+    width: auto;
+    filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.3));
+}
+
+.vertical-divider {
+    width: 1px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.text-gold {
+    color: var(--gold-luxury) !important;
+}
+
+.text-gold-light {
+    color: var(--gold-light);
+}
+
+.text-forest {
+    color: var(--forest-dark);
+}
+
+/* BUTTON LOGOUT */
+.btn-logout-luxury {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 6px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-logout-luxury:hover {
+    color: var(--forest-dark);
+    background-color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+}
+
+/* CONTENT CONTAINER */
+.dashboard-container {
+    position: center;
+    z-index: 5;
+    padding-top: 40px;
+    max-width: 1240px; /* Diperlebar agar ruang 3 kolom terasa pas */
+    padding-bottom: 50px;
+}
+
+/* KARTU KONTEN UTAMA */
+.wombat-profile-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(44, 62, 48, 0.06);
+    border-radius: 24px;
+    padding: 30px 24px;
+    height: 100%; /* Memaksa tinggi kartu sama rata mengikuti baris grid */
+    box-shadow: 0 10px 30px rgba(44, 62, 43, 0.06);
+}
+
+/* Khusus Kartu Kolom Profil Utama agar warnanya kontras dan stand out */
+.profile-main-col {
+    background: linear-gradient(135deg, #ffffff 0%, var(--silk-cream) 100%);
+    border: 1px solid rgba(196, 179, 141, 0.3);
+}
+
+/* STYLE INTERNAL AREA PROFIL */
+.avatar-wrapper {
+    width: 110px;
+    height: 110px;
+    margin: 5px auto 20px auto;
+    border-radius: 50%;
+    border: 3px solid var(--gold-luxury);
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    background-color: #ffffff;
+}
+
+.profile-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-main-col .student-name {
+    color: var(--forest-dark);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.profile-main-col .student-major {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #7f8c8d !important;
+    line-height: 1.5;
+}
+
+.luxury-divider {
+    height: 1px;
+    width: 120px;
+    background: linear-gradient(to right, transparent, var(--gold-luxury), transparent);
+    margin: 0 auto;
+}
+
+.fs-7 {
+    font-size: 0.8rem;
+}
+
+/* KEPALA KARTU (JUDUL SECTION) */
+.card-section-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--forest-dark);
+    border-bottom: 2px solid var(--silk-cream);
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-section-title i {
+    color: var(--gold-luxury);
+}
+
+/* STRUKTUR TABEL DATA */
+.profile-details-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.profile-details-table td {
+    padding: 8px 2px;
+    font-size: 0.85rem;
+    color: #444444;
+}
+
+/* Kolom Kiri (Label) */
+.profile-details-table {
+    width: 45%;
+    font-weight: 600;
+    color: #7f8c8d;
+}
+
+/* Kolom Kanan (Isi Data) */
+.profile-details-table td:last-child {
+    color: var(--forest-dark);
+    font-weight: 500;
+}
+
+/* Atur ulang background badge status di dalam profil */
+.bg-forest {
+    background-color: var(--forest-dark);
+}
+
+/* Garis horizontal pembatas mewah versi melebar */
+.luxury-horizontal-line {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(to right, var(--gold-luxury), rgba(196, 179, 141, 0.1));
+}
+
+/* Memastikan kartu profil lebar tetap memberikan padding yang nyaman */
+.premium-wide-profile {
+    padding: 40px !important;
+    display: flex;
+    align-items: center;
+}
+
+/* Modifikasi mini untuk tabel kanan agar teksnya ringkas */
+.profile-details-table td:first-child {
+    width: 30%; /* Sedikit diperkecil karena kolom kanan lebih compact */
+    font-weight: 600;
+    color: #7f8c8d;
+}
