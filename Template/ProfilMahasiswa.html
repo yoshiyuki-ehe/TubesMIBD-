@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa - Wombat University</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="ProfilMahasiswa.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR UTAMA LUXURY (py-1 disesuaikan karena logo besar) -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-nav py-1">
+        <div class="container px-4 d-flex justify-content-between align-items-center">
+            <!-- Gunakan URL relatif /image/ agar aman saat di-deploy ke server backend -->
+            <img src="/image/wombat-logo.png" class="brand-logo" alt="Wombat Logo">
+            
+            <div class="d-flex align-items-center">
+                <a href="/" class="btn-logout-luxury">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENT CONTAINER -->
+    <div class="container dashboard-container">
+        <div class="row justify-content-center">
+            
+            <!-- MAKSIMAL LEBAR COL-LG-8 (Besar tapi tidak penuh sehamparan layar) -->
+            <div class="col-lg-8 col-xl-7">
+                <div class="wombat-profile-card profile-main-col big-academic-card">
+                    
+                    <!-- KEPALA TABEL / KARTU -->
+                    <div class="d-flex align-items-center justify-content-between mb-4 pb-3 border-bottom-gold">
+                        <div class="d-flex align-items-center gap-3">
+                            <i class="bi bi-mortarboard-fill text-gold fs-3"></i>
+                            <h3 class="m-0 fw-bold text-forest" style="font-size: 1.25rem;">Data Profil Akademik</h3>
+                        </div>
+                        <span class="badge bg-forest text-gold px-3 py-2 fs-7 fw-semibold" style="letter-spacing: 1px;">MAHASISWA AKTIF</span>
+                    </div>
+
+                    <div class="row align-items-start">
+                        <!-- SISI KIRI: FOTO PROFIL -->
+                        <div class="col-md-4 text-center mb-4 mb-md-0">
+                            <div class="avatar-wrapper m-auto mb-3">
+                                <img src="/image/avatar-placeholder.png" alt="Foto Mahasiswa" class="profile-avatar">
+                            </div>
+                            <span class="text-muted d-block fs-7">Tahun Angkatan</span>
+                            <strong class="text-forest" style="font-size: 1.1rem;">2024</strong>
+                        </div>
+
+                        <!-- SISI KANAN: TABEL INFORMASI YANG RAPI -->
+                        <div class="col-md-8 px-md-4">
+                            <table class="academic-details-table">
+                                <tr>
+                                    <td>Nama Lengkap</td>
+                                    <td>: <span class="fw-bold text-forest" th:text="${mahasiswa.nama}">MIKAEL ANGKASA</span></td>
+                                </tr>
+                                <tr>
+                                    <td>NPM</td>
+                                    <td>: <strong th:text="${mahasiswa.nim}">6182401212</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Program Studi</td>
+                                    <td>: Fisika</td>
+                                </tr>
+                                <tr>
+                                    <td>Fakultas</td>
+                                    <td>: Fakultas Sains</td>
+                                </tr>
+                                <tr>
+                                    <td>Jenjang Pendidikan</td>
+                                    <td>: Sarjana (S1)</td>
+                                </tr>
+                                <tr>
+                                    <td>Dosen Wali</td>
+                                    <td>: <span th:text="${mahasiswa.dosenWali != null ? mahasiswa.dosenWali : 'Dr. Andy Sulaiman S.T., M.T.'}">Dr. Andy Sulaiman, S.T., M.T.</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Email Wali Dosen</td>
+                                    <td>: <span class="text-muted" style="font-size: 0.85rem;">andy@wombat.ac.id</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
